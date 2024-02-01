@@ -10,7 +10,7 @@
             "type": "dart",
             "args": [
                 "--dart-define-from-file",
-                ".config/env.json"
+                "./config/env.json"
             ]
         },
         {
