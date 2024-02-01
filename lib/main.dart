@@ -1,5 +1,6 @@
 import 'package:et_lab_clinica_core/et_lab_clinica_core.dart';
 import 'package:et_lab_clinica_self_service/src/binding/lab_clinica_application_binding.dart';
+import 'package:et_lab_clinica_self_service/src/modules/auth/auth_module.dart';
 import 'package:et_lab_clinica_self_service/src/pages/splash_page/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
@@ -22,6 +23,7 @@ class LabClinicaSelfServiceApp extends StatelessWidget {
           path: '/',
         )
       ],
+      modules: [AuthModule()],
     );
   }
 }
