@@ -7,5 +7,7 @@ class HomeModule extends FlutterGetItModule {
   String get moduleRouteName => '/home';
 
   @override
-  Map<String, WidgetBuilder> get pages => {'/': (context) => const HomePage()};
+  Map<String, WidgetBuilder> get pages => {
+        '/': (context) => const HomePage(),
+      };
 }
