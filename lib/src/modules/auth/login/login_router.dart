@@ -10,7 +10,7 @@ class LoginRouter extends FlutterGetItModulePageRouter {
   List<Bind<Object>> get bindings => [
         Bind.lazySingleton<UserLoginService>(
             (i) => UserLoginServiceImpl(userRepository: i())),
-        Bind.lazySingleton((i) => LoginController())
+        Bind.lazySingleton((i) => LoginController(loginService: i()))
       ];
 
   @override
