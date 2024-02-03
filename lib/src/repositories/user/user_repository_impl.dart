@@ -21,7 +21,7 @@ class UserRepositoryImpl implements UserRepository {
           await restClient.unAuth.post('/auth', data: {
         'email': email,
         'password': password,
-        'admin': false, //testando no els@gmail.com não é admin
+        'admin': true, //testando no els@gmail.com não é admin
       });
       return Right(accessToken);
     } on DioException catch (e, s) {
