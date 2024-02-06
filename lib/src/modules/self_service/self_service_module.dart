@@ -9,6 +9,7 @@ import 'package:flutter_getit/flutter_getit.dart';
 
 import 'documents/scan/documents_scan_page.dart';
 import 'documents/scan_confirm/documents_scan_confirm_page.dart';
+import 'find_patient/find_patient_router.dart';
 import 'patient/patient_page.dart';
 
 class SelfServiceModule extends FlutterGetItModule {
@@ -23,7 +24,7 @@ class SelfServiceModule extends FlutterGetItModule {
   Map<String, WidgetBuilder> get pages => {
         '/': (context) => const SelfServicePage(),
         '/whoIAm': (context) => const WhoIAmPage(),
-        '/find-patient': (context) => const FindPatientPage(),
+        '/find-patient': (context) => FindPatientRouter(),
         '/patient': (context) => const PatientPage(),
         '/documents': (context) => const DocumentsPage(),
         '/documents/scan': (context) => const DocumentsScanPage(),
