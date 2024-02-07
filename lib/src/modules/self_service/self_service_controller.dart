@@ -1,4 +1,5 @@
 import 'package:et_lab_clinica_core/et_lab_clinica_core.dart';
+import 'package:et_lab_clinica_self_service/src/models/patient_model.dart';
 import 'package:et_lab_clinica_self_service/src/models/self_service_model.dart';
 import 'package:signals_flutter/signals_flutter.dart';
 
@@ -33,5 +34,17 @@ class SelfServiceController with MessageStateMixin {
 
   void clearForm() {
     _model = _model.clear();
+  }
+
+  void goToFormPatient(PatientModel? patient) {
+    _model = _model.copyWith(
+      patient: () => patient,
+    );
+    _step.forceUpdate(FormSteps.patient);
+  }
+
+  void restartProcess() {
+    _step.forceUpdate(FormSteps.restart);
+    clearForm();
   }
 }
