@@ -161,13 +161,13 @@ class _PatientPageState extends State<PatientPage>
                   TextFormField(
                     readOnly: !enableForm,
                     controller: cepEC,
-                    validator: Validatorless.required('CPF obrigatório'),
+                    validator: Validatorless.required('CEP obrigatório'),
                     inputFormatters: [
                       FilteringTextInputFormatter.digitsOnly,
                       CepInputFormatter(),
                     ],
                     decoration: const InputDecoration(
-                      label: Text('Digite seu CPF'),
+                      label: Text('Digite seu CEP'),
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -288,8 +288,12 @@ class _PatientPageState extends State<PatientPage>
                           final valid =
                               formKey.currentState?.validate() ?? false;
                           if (valid) {
-                            controller.updateAndNext(updatePatient(
-                                selfServiceController.model.patient!));
+                            if (patientFound) {
+                              controller.updateAndNext(updatePatient(
+                                  selfServiceController.model.patient!));
+                            } else {
+                              controller.saveAndNext(createPatientRegister());
+                            }
                           }
                         },
                         child: Visibility(
