@@ -1,6 +1,7 @@
 import 'package:et_lab_clinica_self_service/src/modules/self_service/documents/documents_page.dart';
 import 'package:et_lab_clinica_self_service/src/modules/self_service/done/done_page.dart';
 import 'package:et_lab_clinica_self_service/src/modules/self_service/find_patient/find_patient_page.dart';
+import 'package:et_lab_clinica_self_service/src/modules/self_service/patient/patient_router.dart';
 import 'package:et_lab_clinica_self_service/src/modules/self_service/self_service_controller.dart';
 import 'package:et_lab_clinica_self_service/src/modules/self_service/self_service_page.dart';
 import 'package:et_lab_clinica_self_service/src/modules/self_service/who_i_am/who_i_am_page.dart';
@@ -30,7 +31,7 @@ class SelfServiceModule extends FlutterGetItModule {
         '/': (context) => const SelfServicePage(),
         '/whoIAm': (context) => const WhoIAmPage(),
         '/find-patient': (context) => FindPatientRouter(),
-        '/patient': (context) => const PatientPage(),
+        '/patient': (context) => const PatientRouter(),
         '/documents': (context) => const DocumentsPage(),
         '/documents/scan': (context) => const DocumentsScanPage(),
         '/documents/scan/confirm': (context) =>
