@@ -4,7 +4,6 @@ import 'package:et_lab_clinica_self_service/src/modules/self_service/documents/w
 import 'package:et_lab_clinica_self_service/src/modules/self_service/self_service_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
-import 'package:signals_flutter/signals_flutter.dart';
 
 import '../widgets/lab_clinica_self_service_app_bar.dart';
 
@@ -135,9 +134,8 @@ class _DocumentsPageState extends State<DocumentsPage> with MessageViewMixin {
                               backgroundColor: LabClinicaTheme.orangeColor,
                               fixedSize: const Size.fromHeight(48),
                             ),
-                            onPressed: () {
-                              Navigator.of(context)
-                                  .pushNamed('/self_service/done');
+                            onPressed: () async {
+                              await selfServiceController.finalize();
                             },
                             child: const Text('FINALIZAR'),
                           ),
