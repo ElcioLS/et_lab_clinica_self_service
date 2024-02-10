@@ -6,6 +6,7 @@ import 'package:et_lab_clinica_core/et_lab_clinica_core.dart';
 import 'package:et_lab_clinica_self_service/src/modules/self_service/documents/scan_confirm/documents_scan_confirm_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
+import 'package:signals_flutter/signals_flutter.dart';
 
 import '../../widgets/lab_clinica_self_service_app_bar.dart';
 
@@ -18,6 +19,11 @@ class DocumentsScanConfirmPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final sizeOf = MediaQuery.sizeOf(context);
     final foto = ModalRoute.of(context)!.settings.arguments as XFile;
+
+    controller.pathRemoteStorage.listen(context, () {
+      Navigator.of(context).pop();
+      Navigator.of(context).pop(controller.pathRemoteStorage.value);
+    });
 
     return Scaffold(
       appBar: LabClinicaSelfServiceAppBar(),
@@ -76,9 +82,11 @@ class DocumentsScanConfirmPage extends StatelessWidget {
                         child: SizedBox(
                           height: 48,
                           child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.of(context).pushNamed(
-                                  '/self-service/documents/scan/scan/confirm');
+                            onPressed: () async {
+                              final imageBytes = await foto.readAsBytes();
+                              final fileName = foto.name;
+                              await controller.uploadImage(
+                                  imageBytes, fileName);
                             },
                             child: const Text(
                               'SALVAR',
