@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
             child: Container(
               padding: const EdgeInsets.all(40),
               constraints: BoxConstraints(
-                maxHeight: sizeOf.width * .8,
+                maxWidth: sizeOf.width * .8,
               ),
               decoration: BoxDecoration(
                 color: Colors.white,
