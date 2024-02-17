@@ -15,7 +15,7 @@ Foi muito conhecimento adquirido ao lono do evento.
 Conheci algumas funcionalizades novas do Dart e Flutter e aperfeiçoei minhas habilidades em lógica de programação.
 Durante o evento pude notar uma evelução expressiva em meu nível de raciocínio e meu mindset de dev mobile.
 
-## Packages utilizados nessa eplicação.
+## Packages utilizados nessa aplicação.
 
 - et_lab_clinica_core:                    // Meu Package próprio desenvolvido no evento,
 -    path: ../et_lab_clinica_core        // exclusivamente para ser usado em todas aplicações
