@@ -1,5 +1,5 @@
 # et_lab_clinica_self_service
-# Projeto Flutter Mobile para Tablet 100% Responsivo 
+# Projeto Flutter Mobile para Tablet 100% Responsivo - Fevereiro de 2024
 Um projeto Flutter Mobile Aversão Android para Tablet com a funcionalidade de auto atendimento.
 Cliente/Paciente efetua cadastro diretamente no sistema utilizando a coleta de informações pelo tablet.
 
@@ -16,6 +16,7 @@ Conheci algumas funcionalizades novas do Dart e Flutter e aperfeiçoei minhas ha
 Durante o evento pude notar uma evelução expressiva em meu nível de raciocínio e meu mindset de dev mobile.
 
 ## Packages utilizados nessa eplicação.
+
 et_lab_clinica_core:                    // Meu Package próprio desenvolvido no evento,
     path: ../et_lab_clinica_core       // exclusivamente para ser usado em todas aplicações
   asyncstate: ^2.1.1-dev.1
