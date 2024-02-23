@@ -16,7 +16,7 @@ Foi muito conhecimento adquirido ao longo do evento.
 
 ## Conhecimentos adquiridos e empregados
 
-Conheci algumas funcionalizades novas do Dart e Flutter e aperfeiçoei minhas habilidades em lógica de programação.
+Conheci algumas funcionalidades novas do Dart e Flutter e aperfeiçoei minhas habilidades em lógica de programação.
 Durante o evento pude notar uma evelução expressiva em meu nível de raciocínio e meu mindset de dev mobile.
 
 ## Packages utilizados nessa aplicação.
